@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Felvétel</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="images/icon.png" type="image/png" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Termék felvétel</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Főoldal</a></li>
+            <li><a href="products.html">Képeink</a></li>
+            <li><a href="featured.html">Havi festő ismeretterszjesztő</a></li>
+            <li><a href="contact.html">Új termék felvétele</a></li>
+        </ul>
+    </nav>
+    <section>
+        <form id="orderForm">
+
+            <label for="name">Festő és kép neve:</label><br>
+            <input type="text" id="name" placeholder="Pl. Izzy Barber - Union Pool">
+            <span id="name-error" class="error-message"></span>
+            <br>
+
+            <label for="price">Termék ára (HUF):</label><br>
+            <input type="number" id="price" name="price" placeholder="Pl. 10000" required>
+            <br>
+
+            <span>Milyen festmény?</span><br>
+            <input type="radio" id="oil" name="product" value="oil">
+            <label for="oil">Olaj</label>
+
+            <input type="radio" id="waterc" name="product" value="watercolour">
+            <label for="waterc">Vizfesték</label>
+
+            <input type="radio" id="acryl" name="product" value="acrylic">
+            <label for="acryl">Akril</label>
+
+            <span id="radio-error" class="error-message"></span>
+            <br>
+
+            <label for="termek_kep">Termék kép feltöltése:</label><br>
+            <input type="file" id="fileInput" accept="image/*" required><br>
+
+            <span>Járt már nálunk?</span><br>
+            <input type="checkbox" id="volte" name="volte" value="Volte">
+            <label for="volte">Igen</label>
+            <input type="checkbox" id="volte2" name="volte2" value="Volte">
+            <label for="volte2">Nem</label>
+            <br>
+
+            <label for="date">Ha igen akkor mikor?</label>
+            <input type="date" id="date" name="date">
+            <br>
+
+            <label for="color">Kedvenc szine?</label>
+            <input type="color" id="color" name="color">
+            <br>
+
+            <button type="submit">Termék Hozzáadása</button>
+
+        </form>
+    </section>
+</body>
+</html>
